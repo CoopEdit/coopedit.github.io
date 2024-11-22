@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <textarea id="lua-editor" placeholder="Text here..."></textarea>
+    <button onclick="sendContent()">Send Content</button>
+    <script>
+      function sendContent() {
+        parent.postMessage(document.getElementById('lua-editor').value, '*');
+      }
+    </script>
+  </body>
+</html>
